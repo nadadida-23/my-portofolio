@@ -358,6 +358,32 @@ footer a:hover { color: var(--accent); }
   .contact-grid-info { gap: 1.5rem; flex-direction: column; align-items: center; }
   .modal-box { padding: 2.5rem 1.5rem; }
 }
+/* ─── PERBAIKAN TAMPILAN KHUSUS LAYAR HP (RESPONSIF) ─── */
+@media (max-width: 768px) {
+  /* 1. Mengecilkan ukuran teks nama raksasa agar pas di layar HP */
+  .hero-title {
+    font-size: clamp(2.2rem, 11vw, 3.8rem) !important; 
+    line-height: 0.95 !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 2. Menipiskan garis tepi outline di HP agar tidak terlihat kasar */
+  .hero-title .name-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* 3. Menata ulang menu navigasi agar pas di pojok kanan HP tanpa ngos-ngosan */
+  nav {
+    top: 1rem;
+    right: 1.5rem;
+    padding: 0.4rem 1rem;
+    gap: 1rem;
+  }
+  
+  nav a {
+    font-size: 0.8rem; /* Mengecilkan teks menu sedikit di HP */
+  }
+}
 </style>
 </head>
 <body>
